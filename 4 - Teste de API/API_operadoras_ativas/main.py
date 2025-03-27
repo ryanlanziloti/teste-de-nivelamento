@@ -2,7 +2,15 @@ from fastapi import FastAPI, Query
 import pandas as pd
 
 app = FastAPI()
+from fastapi.middleware.cors import CORSMiddleware
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Defina domínios específicos se precisar
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 # Carregar o CSV, tratando valores vazios como strings
 df = pd.read_csv("Relatorio_cadop.csv", sep=";", dtype=str).fillna("")
 

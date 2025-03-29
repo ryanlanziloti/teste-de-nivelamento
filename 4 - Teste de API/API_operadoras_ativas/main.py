@@ -24,4 +24,3 @@ def buscar_operadora(q: str = Query(..., description="Texto para buscar")):
     resultado = df[df.apply(lambda row: row.astype(str).str.contains(q, case=False, na=False).any(), axis=1)]
     
     return resultado.to_dict(orient="records")
-# Rodar API: uvicorn main:app --reload

@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "e4c7f1ea-6331-4458-9e58-df8e15aa9143",
+		"name": "Operadoras Ativas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26422574"
+	},
+	"item": [
+		{
+			"name": "Todas Operadoras",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/dados",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"dados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Operadoras Filtradas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/buscar?q=RJ",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "RJ"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
